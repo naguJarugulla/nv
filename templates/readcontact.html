@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+</head>
+<body>
+    {% for i in details %}
+    <label>name</label>
+    {{i[0]}}
+</br>
+    <label>email</label>
+    {{i[1]}}
+    <br>
+    <label>subject</label>
+    {{i[2]}}
+</br>
+    <label>feedback</label>
+    {{i[3]}}
+</br>
+    {% endfor %}
+</body>
+</html>

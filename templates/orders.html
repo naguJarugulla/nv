@@ -1,0 +1,30 @@
+
+    {% extends 'home.html' %}
+{% block content %}
+
+               
+       <center>
+      <table border="1px" cellpadding="20px" cellspacing="0px" style="margin-top: 100px;">
+
+              <tr>
+                <th>orderid</th>
+                <th> itemname</th>
+                <th>quantity</th>
+                <th>Total</th>
+                <th>Invoice</th>
+              </tr>
+              {% for i in orders %}
+              <tr>
+              <td>{{i[0]}}</td>
+              <td>{{i[2]}}</td>
+              <td>{{i[3]}}</td>
+              <td>{{i[4]}}</td>
+              <td><a href="{{url_for('invoice',ordid=i[0])}}">get invoice</a></td>
+            </tr>
+              {% endfor %}
+        
+             </table>
+            
+            </center>
+       
+{% endblock%}

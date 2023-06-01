@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>seeorders</title>
+<style>
+   .bton{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    border-radius: 10%;
+    color: black;
+    padding: 10px;
+    text-align: center;
+    position: absolute;
+    right:5px;
+
+    /*display: inline-block;*/
+    font-size: 25px;
+    margin-top:none;
+    
+    cursor: pointer;
+    color:white;
+
+  }
+</style>
+</head>
+
+<body>
+    <h1>orders placed! <a href="{{url_for('admin')}}"> <button style="float:right" class="bton">Back</button></a> </center></h1>
+    <div class="bgcolor3 pt-2 pb-2">
+        <div class="container">
+          <div class="row">
+          {% for i in orders %}         
+            <div class="col-12 col-md-6 col-lg-3">
+              <div class="explorecards shadow p-2 mb-2">
+                 
+                  <label class="cardhead4" > {{i[2]}}</label><br>
+                  <b>{{i[5]}}</b>
+    
+                  <label class="cardhead4" style="margin-top:10px;">quantity :{{i[3]}}</label><br>
+    
+                  <label class="cardhead4"  style="margin-top:10px;">price:{{i[4]}}</label>
+                  
+                </div>
+                </div>
+            {% endfor %}
+            </div>
+            </div>
+            </div>
+</body>
+</html>
